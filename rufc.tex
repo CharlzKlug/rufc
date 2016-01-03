@@ -1,0 +1,89 @@
+\documentclass[a4paper, 12pt]{book}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{fancyvrb}
+\usepackage{upquote}
+\usepackage{textcomp}
+\usepackage[pdftex, dvips]{graphicx}
+
+\graphicspath{{Images/Cover/}{Images/Chapter_02/}}
+\usepackage{pdfpages}
+\usepackage[pdfborder={0 0 0}, pdftex]{hyperref}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{epigraph}
+\usepackage{tikz}
+%\usetikzlibrary{graphdrawing}
+
+%\usepackage{pgfmath}
+\usetikzlibrary{graphs}
+%\usetikzlibrary{graphdrawing.force}
+%\usegdlibrary{trees}
+
+\usetikzlibrary{calc, positioning, decorations, decorations.pathmorphing, decorations.pathreplacing}
+
+%\usepackage{cm-super}
+\title{Функциональный C}
+\date{03.01.1999}
+\author{Питер Хартел (Pieter Hartel) Хенк Мюллер (Henk Muller) \\ Саутгемптонский университет Бристольский университет}
+
+\begin{document}
+\lstdefinestyle{customoz}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+%  frame=L,
+  xleftmargin=\parindent,
+  language=Oz,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{language=C, mathescape=true, style=customc}
+
+\renewcommand {\contentsname} {Оглавление}
+\renewcommand {\chaptername} {Глава}
+%\includepdf{Cover.pdf}
+
+{\let\newpage\relax\maketitle}
+\maketitle
+\newpage
+
+Посвящается Марике \emph{Питер}
+
+Посвящается моей семье и другим источникам вдохновения \emph{Хенк}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{Chapters/preface}
+
+%\input{Chapters/running_examples}
+%\part{Введение}
+%\input{Chapters/01_Chapter}
+%\part{Общие Модели Вычислений}
+%\input{Chapters/02_Chapter}
+
+
+
+%\part{Приложения}
+%\input{Chapters/literature}
+\end{document}
