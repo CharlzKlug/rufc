@@ -6,7 +6,8 @@
 \usepackage{upquote}
 \usepackage{textcomp}
 \usepackage[pdftex, dvips]{graphicx}
-
+\usepackage{amsfonts}
+\usepackage{amsmath}
 \graphicspath{{Images/Cover/}{Images/Chapter_02/}}
 \usepackage{pdfpages}
 \usepackage[pdfborder={0 0 0}, pdftex]{hyperref}
@@ -27,8 +28,9 @@
 \title{Функциональный C}
 \date{03.01.1999}
 \author{Питер Хартел (Pieter Hartel) Хенк Мюллер (Henk Muller) \\ Саутгемптонский университет Бристольский университет}
-
+\def\inline{\lstinline[style=customml,keywordstyle={}]}
 \begin{document}
+
 \lstdefinestyle{customoz}{
   belowcaptionskip=1\baselineskip,
   breaklines=true,
@@ -37,6 +39,17 @@
   language=Oz,
   showstringspaces=false,
   basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customml}{
+  language=ML,
+  showstringspaces=true,
+  frame=none,
+  basicstyle=\footnotesize\ttfamily\itshape,
   keywordstyle=\bfseries\color{green!40!black},
   commentstyle=\itshape\color{purple!40!black},
   identifierstyle=\color{blue},
